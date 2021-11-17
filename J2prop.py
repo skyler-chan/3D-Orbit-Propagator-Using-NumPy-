@@ -1,4 +1,4 @@
-# Appended J2 Perturbation which causes Nodal Precession
+# Appended J2 Perturbation (causes Nodal Precession)
 from matplotlib import pyplot as plt
 from math import sqrt  # math gives a sqrt function
 import numpy as np
@@ -41,8 +41,7 @@ for n in range(0, N-1):
     # Euler step to the next point, for purposes of estimating slope.
     u1 = u[n] + k1*h
 
-    # In order to get acceleration at the next point, we need
-    # the radius of the spacecraft from the earth at the next point
+    # In order to get acceleration at the next point, we need the radius of the spacecraft from the earth at the next point
     r1 = sqrt(u1[0]**2 + u1[1]**2 + u1[2]**2)
 
     # Slopes from the next point
@@ -56,8 +55,6 @@ for n in range(0, N-1):
                    u1[1]*(5*u1[2]**2/r**2 - 1),
                   - GM / r**3 * u1[2] + (3/2 * J2 * GM * RE**2 / r**5) *
                   u1[2]*(5*u1[2]**2/r**2 - 3)])
-
-    # Put it all together
     u[n+1] = u[n] + h * 1/2 * (k1 + k2)
     t[n+1] = t[n] + h
 
@@ -75,7 +72,3 @@ ax.plot(u[:, 0], u[:, 1], u[:, 2], "k")
 
 
 plt.show()
-
-
-# notice when run, takes a sec to plot, solver is slow
-# error bc of euler's method is accumulating in the overlap of orbit
