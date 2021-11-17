@@ -71,4 +71,4 @@ plt.show()
 
 
 # notice when run, takes a sec to plot, solver is slow
-# error bc of euler's method is accumulating in the overlap of orbit
+# error because of euler's method is accumulating in the overlap of orbit
