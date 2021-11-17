@@ -1,12 +1,12 @@
-# Appended J2 Perturbation (causes Nodal Precession)
+# Appended J2 Perturbation (causes Nodal Precession)- produces graph
 from matplotlib import pyplot as plt
-from math import sqrt  # math gives a sqrt function
+from math import sqrt  # math introduces sqrt function
 import numpy as np
 
 N = 8000
 GM = 3.986e5  # Gravitational parameter of Earth
 J2 = 0.00108263  # J2 dimensionless constant
-RE = 6378  # Radius of earth in km
+RE = 6378  # Radius of earth (km)
 
 # Creating the arrays (basically to let values set somewhere - point of arrays, kinda like spreadsheet)
 
@@ -69,6 +69,5 @@ ax.plot_wireframe(x, y, z, color="b")  # plot the sphere
 ax.plot(u[:, 0], u[:, 1], u[:, 2], "k")
 
 # get current access = gca
-
 
 plt.show()
