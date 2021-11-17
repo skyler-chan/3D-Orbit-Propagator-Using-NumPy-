@@ -1,6 +1,4 @@
-# Euler's method, RK1 (RK4 is best, stands for Runge-Kutta)
-# Next goal, to get RK4, then using smt diff not for loops, for loops are slow
-# Matplotlib is used to graph stuff
+# Euler's method, RK1 (RK4 is best, stands for Runge-Kutta). Next iteration, reach RK4, then changing method since for loops are too slow
 from matplotlib import pyplot as plt
 from math import sqrt  # math gives a sqrt function
 import numpy as np
