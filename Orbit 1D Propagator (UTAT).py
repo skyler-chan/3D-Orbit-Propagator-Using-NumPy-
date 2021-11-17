@@ -1,23 +1,16 @@
-
-# From meeting with Mingde, Sep 27 2021
 # Matplotlib is used to graph stuff
 
 from matplotlib import pyplot as plt
 
 N = 200
 
-
 # Creating the arrays
-
 v = [0] * N
 z = [0] * N
 z_an = [0] * N
 t = [0] * N
-# Initialize these to zero because we dont know them
 
-
-# Except z. since its 10 since we know that
-
+# Initialize values to zero because we dont know them except Z, given
 z[0] = 10
 
 h = 0.01
