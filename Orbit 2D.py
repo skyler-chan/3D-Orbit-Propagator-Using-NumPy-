@@ -1,10 +1,4 @@
-
-
-# Euler's method, RK1 (RK4 is best, stands for Runge-Kutta)
-# Next goal, to get RK4, then using smt diff not for loops, for loops are slow
-
-
-# Matplotlib is used to graph stuff
+# Euler's method, RK1 (RK4 is best, stands for Runge-Kutta). Next iteration, reach RK4, then changing method since for loops are too slow
 
 from matplotlib import pyplot as plt
 from math import sqrt  # math gives a sqrt function
@@ -21,15 +15,13 @@ x = [0] * N
 y = [0] * N
 t = [0] * N
 
-# Initialioze values
-
-# radius is 6378, orbit say at 6878
+# Initialioze values - given radius (km) is 6378, assuming orbit is 6878
 x[0] = 6878  # km
 y[0] = 0
 vx[0] = 0
 vy[0] = 11.2  # km/s
 
-# vy is the instantaneous velocity at the start
+# vy is the instantaneous velocity at the start, assuming position of satellite at 0 degrees
 
 h = 1  # sec
 
@@ -52,11 +44,11 @@ earth = plt.Circle((0, 0), 6378)
 plt.plot(x, y, "k")
 plt.gca().add_artist(earth)
 plt.gca().set_aspect(1)
-# get current access = gca
 
+# get current access = gca
 
 plt.show()
 
 
-# notice when run, takes a sec to plot, solver is slow
-# error bc of euler's method is accumulating in the overlap of orbit
+# notes to self: notice when run, takes a sec to plot, solver is slow
+# error due to euler's method is shown by overlap of orbit
