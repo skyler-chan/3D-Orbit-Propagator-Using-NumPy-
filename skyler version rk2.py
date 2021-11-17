@@ -1,8 +1,4 @@
-
-# MY CODE
-
-# Euler's method, RK1 (RK4 is best, stands for Runge-Kutta)
-# Next goal, to get RK4, then using smt diff not for loops, for loops are slow
+# Faulty version of RK2
 
 
 # Matplotlib is used to graph stuff
