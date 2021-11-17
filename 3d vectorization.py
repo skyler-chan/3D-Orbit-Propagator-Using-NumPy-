@@ -9,7 +9,7 @@ N = 800
 GM = 3.986e5
 
 
-# Creating the arrays (basically to let values set somewhere - point of arrays, kinda like spreadsheet)
+# Creating the arrays (basically to let values sit somewhere - point of arrays, kinda like spreadsheet)
 
 u = np.zeros((N, 6))
 t = [0]*N
